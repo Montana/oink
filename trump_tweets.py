@@ -167,10 +167,7 @@ class TwitterSearchImpl(TwitterSearch):
                        tweet['retweets'], tweet['tweet_id']]
                 self.writer.writerow(row)
 
-        
-
                 return True
-
 
 if __name__ == '__main__':
     with open(OUT_FILE, "w") as f:
