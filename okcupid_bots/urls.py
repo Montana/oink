@@ -1,6 +1,6 @@
 #from django.contrib import admin
 from main.admin import admin_site
-"""okcupid_bots URL Configuration
+"""oink_bots URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
