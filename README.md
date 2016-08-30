@@ -18,7 +18,10 @@ Django Admin Plus
 
 
 
-## Contributing
-If you are interested in improving the bot then just Fork the repo, create a new branch, commit your changes and create a pull request.
+## Usage
 
-Thankyou
+The first thing is to check your version of Django
+
+
+``` python -m django --version 
+```
