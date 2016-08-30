@@ -32,4 +32,4 @@ Assuming you have the latest version of Django installed, you can follow this
 
 ## Comments
 
-This is still a work in progress and the repository is not finished, but take a look at the code for now if you'd like.
+This is still a work in progress and the repository is not finished, but take a look at the code for now if you'd like. This is for EDUCATIONAL purposes only - do not use on OkCupid. 
