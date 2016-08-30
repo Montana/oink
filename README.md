@@ -1,7 +1,7 @@
-# okcupid_bot
+# oink
 
 ## Description
-A bot for okcupid.com to send message to new people from your profile.
+An automation system via a bot for okcupid.com to send messages back when receiving one from a girl.
 
 ## Requirements
 </br>Python </br>
