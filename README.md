@@ -1,15 +1,20 @@
 # oink
 
 ## Description
-An automation system via a bot for okcupid.com to send messages back when receiving one from a girl.
+An automation system via a bot for okcupid.com to send messages back when receiving one from a girl. Written in Python and using Django.
 
 ## Requirements
-</br>Python </br>
-</br>Django </br>
-</br>Selenium </br>
-</br>BeautifulSoup </br>
-</br>Requests </br>
-</br>Django Admin Plus  </br>
+
+
+```
+Python
+Django
+Selenium
+BeautifulSoup 
+Requests
+Django Admin Plus
+
+```
 
 
 
