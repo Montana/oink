@@ -1,5 +1,5 @@
 """
-WSGI config for okcupid_bots project.
+WSGI config for oink bot
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
