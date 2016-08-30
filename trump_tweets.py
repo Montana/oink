@@ -30,11 +30,9 @@ class TwitterSearch:
         while response is not None and continue_search and response['items_html'] is not None:
             tweets = self.parse_tweets(response['items_html'])
 
-            # If we have no tweets, then we can break the loop early
             if len(tweets) == 0:
                 break
-
-            # If we haven't set our min tweet yet, set it now
+            
             if min_tweet is None:
                 min_tweet = tweets[0]
 
@@ -53,8 +51,7 @@ class TwitterSearch:
     def execute_search(self, url):
         
         try:
-            # Specify a user agent to prevent Twitter from returning a profile
-            # card
+          
             headers = {
                 'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36'
             }
@@ -62,9 +59,7 @@ class TwitterSearch:
             response = urllib2.urlopen(req)
             data = json.loads(response.read())
             return data
-
-        # If we get a ValueError exception due to a request timing out, we sleep for our error delay, then make
-        # another attempt
+      
         except ValueError as e:
             print e.message
             print "Sleeping for %i" % self.error_delay
@@ -78,8 +73,6 @@ class TwitterSearch:
         tweets = []
         for li in soup.find_all("li", class_='js-stream-item'):
 
-            # If our li doesn't have a tweet-id, we skip it as it's not going
-            # to be a tweet.
             if 'data-item-id' not in li.attrs:
                 continue
 
@@ -94,31 +87,26 @@ class TwitterSearch:
                 'favorites': 0
             }
 
-            # Tweet Text
             text_p = li.find("p", class_="tweet-text")
             if text_p is not None:
                 tweet['text'] = text_p.get_text().encode('utf-8')
 
-            # Tweet User ID, User Screen Name, User Name
             user_details_div = li.find("div", class_="tweet")
             if user_details_div is not None:
                 tweet['user_id'] = user_details_div['data-user-id']
                 tweet['user_screen_name'] = user_details_div['data-user-id']
                 tweet['user_name'] = user_details_div['data-name']
 
-            # Tweet date
             date_span = li.find("span", class_="_timestamp")
             if date_span is not None:
                 tweet['created_at'] = float(date_span['data-time-ms'])
 
-            # Tweet Retweets
             retweet_span = li.select(
                 "span.ProfileTweet-action--retweet > span.ProfileTweet-actionCount")
             if retweet_span is not None and len(retweet_span) > 0:
                 tweet['retweets'] = int(
                     retweet_span[0]['data-tweet-stat-count'])
 
-            # Tweet Favourites
             favorite_span = li.select(
                 "span.ProfileTweet-action--favorite > span.ProfileTweet-actionCount")
             if favorite_span is not None and len(retweet_span) > 0:
@@ -138,7 +126,6 @@ class TwitterSearch:
             'q': query
         }
 
-        # If our max_position param is not None, we add it to the parameters
         if max_position is not None:
             params['max_position'] = max_position
 
