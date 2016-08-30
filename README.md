@@ -23,5 +23,4 @@ Django Admin Plus
 The first thing is to check your version of Django
 
 
-``` python -m django --version 
-```
+``` python -m django --version ```
