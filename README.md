@@ -3,7 +3,7 @@
 <img src="https://cdn4.iconfinder.com/data/icons/pig-cartoon-emoji/742/pig-cartoon-emoji-animal-cute-014-512.png" height="100" width="100">
 
 ## Description
-An automation system via a bot for okcupid.com to send messages back when receiving one from a girl. Written in Python and using Django.
+A bot for okcupid.com that replies to messages via scraping Donald Trump tweets. Written in Python and using Django.
 
 ## Requirements
 
