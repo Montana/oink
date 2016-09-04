@@ -32,7 +32,7 @@ Assuming you have the latest version of Django installed, you can follow this
 
 You can then run the bot, the results are similar to this
 
-<img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t34.0-12/14172052_1135471236492271_630631638_n.png?oh=2ca6c1cdc2c37c13d08e15e01001eca5&oe=57C82AA8">
+<img src="http://www.grapesoda.org/convo.png">
 
 ## Comments
 
