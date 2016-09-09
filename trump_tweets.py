@@ -163,5 +163,5 @@ if __name__ == '__main__':
         twit = TwitterSearchImpl(0, 5, writer)
         twit.search("from:realdonaldtrump") 
         
-        # You can change "realdonaldtrump" to any twitter account, so in essence, you can respond to OKC messages from your own Twitter account if you desire.
+        # You can change "realdonaldtrump" to any twitter account.
         
